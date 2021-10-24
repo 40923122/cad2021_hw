@@ -145,14 +145,24 @@ img.add_border {
 <script>
 var winkVideoData = {
   dataVersion: 1,
-  frameRate: 20,
-  buttonFrameLength: 10,
-  buttonFrameOffset: 5,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
   frameStops: {
+    "2": [
+      { type: "gotoframe", rect: { x: 549, y: 283, width: 33, height: 17 }, target: 3 },
+    ],
+    "7": [
+      { type: "gotoframe", rect: { x: 496, y: 284, width: 33, height: 17 }, target: 2 },
+      { type: "gotoframe", rect: { x: 529, y: 284, width: 33, height: 17 }, target: 8 },
+    ],
+    "12": [
+      { type: "gotoframe", rect: { x: 575, y: 322, width: 33, height: 17 }, target: 7 },
+    ],
   },
 };
 </script>
-<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="600" width="900">
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="600" loop="loop" muted="" playsinline="" width="900">
 <source src="./../downloads/test2.mp4" type="video/mp4"/></video>
 <div class="winkVideoOverlayClass"></div>
 <div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
